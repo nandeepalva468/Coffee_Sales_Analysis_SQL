@@ -4,6 +4,8 @@
 **Database:** COFFEE_SQL_PROJECT  
 **Author:** nandeepalva468
 
+---
+
 This project showcases how SQL can be used to explore and analyze coffee shop sales data. It covers everything from data cleaning and exploration to business-driven query analysis. It's perfect for beginner data analysts aiming to build SQL skills using real-world scenarios.
 
 ---
