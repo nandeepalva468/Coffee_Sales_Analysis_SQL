@@ -1,4 +1,4 @@
-# Coffee_Sales_Analysis_SQL
+# ☕ Coffee_Sales_Analysis_SQL
 
 **Level:** Beginner  
 **Database:** COFFEE_SQL_PROJECT  
