@@ -10,6 +10,11 @@ This project showcases how SQL can be used to explore and analyze coffee shop sa
 
 ---
 
+📥 **Dataset Download:**  
+You can download the dataset from Kaggle:  
+🔗 [Coffee Store Sales Dataset](https://www.kaggle.com/datasets/reignrichard/coffee-store-sales?select=Coffe_sales.xlsx)
+
+---
 ## 📌 Project Objectives
 
 - **Set Up a Sales Database**: Create and populate a `coffee_sales` table.
