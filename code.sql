@@ -1,8 +1,8 @@
-CREATE DATABASE COFFEE_SQL_PROJECT;
+1.CREATE DATABASE COFFEE_SQL_PROJECT;
 
-USE COFFEE_SQL_PROJECT;
+2.USE COFFEE_SQL_PROJECT;
 
-CREATE TABLE COFFEE_SALES (
+3.CREATE TABLE COFFEE_SALES (
     date DATE,
     datetime DATETIME,
     hour_of_day INT,
@@ -18,63 +18,63 @@ CREATE TABLE COFFEE_SALES (
 );
 
 -- Rename incorrectly encoded column
-ALTER TABLE COFFEE_SALES RENAME COLUMN ï»¿date TO date;
+4.ALTER TABLE COFFEE_SALES RENAME COLUMN ï»¿date TO date;
 
 -- Remove rows with NULLs in important fields
-DELETE FROM COFFEE_SALES
+5.DELETE FROM COFFEE_SALES
 WHERE date IS NULL OR datetime IS NULL OR hour_of_day IS NULL OR 
       cash_type IS NULL OR card IS NULL OR money IS NULL OR 
       coffee_name IS NULL OR Time_of_Day IS NULL OR Weekday IS NULL OR
       Month_name IS NULL OR Weekdaysort IS NULL OR Monthsort IS NULL;
 
-DELETE FROM COFFEE_SALES
+6.DELETE FROM COFFEE_SALES
 WHERE date IS NULL OR datetime IS NULL OR hour_of_day IS NULL OR 
       cash_type IS NULL OR card IS NULL OR money IS NULL OR 
       coffee_name IS NULL OR Time_of_Day IS NULL OR Weekday IS NULL OR
       Month_name IS NULL OR Weekdaysort IS NULL OR Monthsort IS NULL;
 
-SELECT * FROM COFFEE_SALES
+7.SELECT * FROM COFFEE_SALES
 WHERE date='01-03-2024';
 
-SELECT * FROM COFFEE_SALES
+8.SELECT * FROM COFFEE_SALES
 WHERE  coffee_name = 'Latte' AND 
 DATE BETWEEN '01-03-2024' AND '31-03-2024';
 
-SELECT Weekday,
+9.SELECT Weekday,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY Weekday
 ORDER BY total_sale DESC;
 
-SELECT coffee_name,
+10.SELECT coffee_name,
 COUNT(*) AS total_orders
 FROM coffee_sales
 GROUP BY coffee_name
 ORDER BY total_orders DESC;
 
-SELECT cash_type,
+11.SELECT cash_type,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY cash_type;
 
-SELECT hour_of_day,
+12.SELECT hour_of_day,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY hour_of_day
 ORDER BY hour_of_day;
 
-SELECT Time_of_Day,
+13.SELECT Time_of_Day,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY Time_of_Day;
 
-SELECT Month_name,
+14.SELECT Month_name,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY Month_name, Monthsort
 ORDER BY Monthsort;
 
-SELECT coffee_name,
+15.SELECT coffee_name,
 SUM(CAST(REPLACE(money, 'R', '') AS DECIMAL(10,2))) AS total_sale
 FROM coffee_sales
 GROUP BY coffee_name
